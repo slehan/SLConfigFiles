@@ -7,8 +7,8 @@ NO_COLOR='\033[0m'
 
 # Check root
 echo "${RED}Checking if root...${NO_COLOR}"
-if [[$EUID -ne 0]]; then
-    echo "You must run this script as root!" 1>&2
+if ["$EUID" -ne 0]
+    then echo "You must run this script as root!"
     exit 1
 fi
 
