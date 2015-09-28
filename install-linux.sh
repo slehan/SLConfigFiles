@@ -41,3 +41,4 @@ echo 'deb http://download.opensuse.org/repositories/shells:/fish:/release:/2/Deb
 apt-get update
 apt-get install fish
 chsh -s /usr/bin/fish $USERNAME
+echo -e "${RED}Fish installation complete, if you're in a desktop environment be sure to logout and back in to finalize shell changes${NO_COLOR}"
