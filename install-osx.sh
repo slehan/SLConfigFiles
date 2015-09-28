@@ -34,3 +34,7 @@ vim +PluginInstall +qall
 echo "${ORANGE}--- Installing tmux configuration... ---${NO_COLOR}"
 ln -s $SCRIPT_DIR/tmux/.tmux.conf ~/.tmux.conf
 tmux source ~/.tmux.conf
+
+# configure Fish
+echo "${ORANGE}--- Setting Fish as default shell... ---${NO_COLOR}"
+chsh -s /usr/local/bin/fish
