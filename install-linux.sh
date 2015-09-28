@@ -5,6 +5,10 @@ SCRIPT_DIR="$( cd "$( dirname "$0" )" && pwd )"
 RED='\033[0;31m'
 NO_COLOR='\033[0m'
 
+# Get Username
+echo "Enter username: "
+read USERNAME
+
 # VIM
 echo "${RED}--- Installing Vim configuration... ---${NO_COLOR}"
 sudo apt-get install vim-nox llvm clang tmux build-essential cmake python-dev
@@ -26,9 +30,7 @@ tmux source ~/.tmux.conf
 
 # configure Fish
 echo -e "${RED}--- Setting Fish as default shell... ---${NO_COLOR}"
-su root
 echo 'deb http://download.opensuse.org/repositories/shells:/fish:/release:/2/Debian_8.0/ /' >> /etc/apt/sources.list.d/fish.list 
 apt-get update
 apt-get install fish
-exit
-chsh -s /usr/bin/fish
+chsh -s /usr/bin/fish $USERNAME
