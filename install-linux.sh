@@ -5,7 +5,7 @@ SCRIPT_DIR="$( cd "$( dirname "$0" )" && pwd )"
 
 # VIM
 echo "--- Installing Vim configuration... ---"
-sudo apt-get install vim-nox llvm tmux build-essential cmake python-dev
+sudo apt-get install vim-nox llvm clang tmux build-essential cmake python-dev
 echo "Installing Vundle..."
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ln -s $SCRIPT_DIR/vim/.vimrc ~/.vimrc 
