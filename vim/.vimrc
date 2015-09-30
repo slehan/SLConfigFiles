@@ -467,3 +467,5 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
+" More YCM settings
+let g:ycm_global_ycm_extra_conf = '~/.configfiles/vim/.ycm_extra_conf.py'
