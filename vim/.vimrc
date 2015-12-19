@@ -277,6 +277,8 @@ endfunc
 autocmd BufWrite *.py :call DeleteTrailingWS()
 autocmd BufWrite *.coffee :call DeleteTrailingWS()
 
+" Map the tagbar plugin
+nmap <F8> :TagbarToggle<CR> 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vimgrep searching and cope displaying
@@ -433,6 +435,9 @@ Plugin 'pangloss/vim-javascript'
 " YouCompleteMe
 Plugin 'Valloric/YouCompleteMe'
 
+" YCM-Generator
+Plugin 'rdnetto/YCM-Generator'
+
 " emmett-vim
 Plugin 'mattn/emmet-vim'
 
@@ -452,6 +457,9 @@ Plugin 'jelera/vim-javascript-syntax'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 
+" Tagbar
+Plugin 'majutsushi/tagbar'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -469,3 +477,5 @@ filetype plugin indent on    " required
 
 " More YCM settings
 let g:ycm_global_ycm_extra_conf = '~/.configfiles/vim/.ycm_extra_conf.py'
+" Apply YCM FixIt
+map <F9> :YcmCompleter FixIt<CR>
