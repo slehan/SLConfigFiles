@@ -11,7 +11,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 
 # Tools
 echo -e "${RED}--- Installing Useful Tools ---${NO_COLOR}"
-brew install vim
+brew install vim --override-system-vim
 brew install cmake
 brew install tmux
 brew install fish
@@ -27,6 +27,8 @@ echo -e "${RED}Linking libclang.so.1 to libclang.so...${NO_COLOR}"
 vim +PluginInstall +qall
 ~/.vim/bundle/YouCompleteMe/install.py --clang-completer --system-libclang
 
+# bro pages
+gem install bropages
 
 # tmux
 echo -e "${RED}--- Installing tmux configuration... ---${NO_COLOR}"
